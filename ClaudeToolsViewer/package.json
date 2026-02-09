@@ -1,0 +1,36 @@
+{
+  "name": "claude-tools-viewer",
+  "version": "0.1.0",
+  "description": "Claude Tools - Personal Assistant",
+  "productName": "Claude Tools",
+  "private": true,
+  "scripts": {
+    "lint": "eslint --ext .js,.ts,.vue ./",
+    "tsc": "vue-tsc --noEmit",
+    "dev": "quasar dev",
+    "build": "quasar build"
+  },
+  "dependencies": {
+    "@quasar/extras": "^1.16.9",
+    "pinia": "^2.1.7",
+    "quasar": "^2.14.2",
+    "vue": "^3.4.7",
+    "vue-router": "^4.2.5"
+  },
+  "devDependencies": {
+    "@quasar/app-vite": "^1.7.3",
+    "@types/node": "^20.10.6",
+    "@typescript-eslint/eslint-plugin": "^6.16.0",
+    "@typescript-eslint/parser": "^6.16.0",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-vue": "^9.19.2",
+    "prettier": "^3.1.1",
+    "typescript": "^5.3.3",
+    "vue-tsc": "^1.8.27"
+  },
+  "engines": {
+    "node": "^20 || ^18 || ^16",
+    "yarn": ">= 1.21.1"
+  }
+}

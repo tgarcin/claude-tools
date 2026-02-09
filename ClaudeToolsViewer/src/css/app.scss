@@ -1,0 +1,26 @@
+$dark: #111;
+$dark-page: #0a0a0a;
+$primary: #c084fc;
+$section-bg: #1a1a1a;
+$card-bg: #1e1e1e;
+$border-color: #333;
+
+body.body--dark {
+  background: $dark-page;
+}
+
+.q-card {
+  background: $card-bg;
+  border: 1px solid $border-color;
+}
+
+.page-container {
+  padding: 16px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.section-card {
+  background: $section-bg;
+  margin-bottom: 16px;
+}

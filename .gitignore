@@ -1,0 +1,18 @@
+# .NET
+ClaudeTools/bin/
+ClaudeTools/obj/
+*.db
+
+# Frontend
+ClaudeToolsViewer/node_modules/
+ClaudeToolsViewer/.yarn/
+ClaudeToolsViewer/dist/
+ClaudeToolsViewer/.quasar/
+
+# IDE
+.vs/
+.vscode/
+*.user
+
+# Secrets
+appsettings.Development.json
