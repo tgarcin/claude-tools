@@ -6,6 +6,9 @@
           <span class="text-weight-bold">Claude Tools</span>
           <span class="text-caption q-ml-sm text-grey-5">Personal Assistant</span>
         </q-toolbar-title>
+        <q-btn flat to="/" label="Chat" :color="route.name === 'home' ? 'primary' : 'grey-5'" />
+        <q-btn flat to="/audit" label="Audit" :color="route.name === 'audit' ? 'primary' : 'grey-5'" />
+        <q-btn flat to="/monitor" label="Monitor" :color="route.name === 'monitor' ? 'primary' : 'grey-5'" />
       </q-toolbar>
     </q-header>
 
@@ -16,5 +19,7 @@
 </template>
 
 <script setup lang="ts">
-// Main layout
+import { useRoute } from 'vue-router'
+
+const route = useRoute()
 </script>

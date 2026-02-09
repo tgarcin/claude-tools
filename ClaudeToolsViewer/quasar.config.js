@@ -20,6 +20,12 @@ module.exports = configure(function () {
         node: 'node16',
       },
       vueRouterMode: 'history',
+      vitePlugins: [],
+      extendViteConf(viteConf) {
+        viteConf.server = viteConf.server || {}
+        viteConf.server.fs = viteConf.server.fs || {}
+        viteConf.server.fs.allow = ['.', '/home/tgarcin/.yarn']
+      },
     },
 
     devServer: {
@@ -27,7 +33,7 @@ module.exports = configure(function () {
       open: false,
       proxy: {
         '/api': {
-          target: 'http://localhost:5000',
+          target: 'http://localhost:5044',
           changeOrigin: true,
         },
       },

@@ -2,6 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using ClaudeTools.Data;
 using ClaudeTools.Features.Chat;
 using ClaudeTools.Features.Audit;
+using ClaudeTools.Features.SystemMonitor;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,6 +13,11 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 // Claude API service
 builder.Services.AddHttpClient<ChatService>();
 builder.Services.AddScoped<ChatService>();
+
+// System monitor
+builder.Services.AddSingleton<SystemMonitorService>();
+builder.Services.AddSingleton<MetricsCollectorService>();
+builder.Services.AddHostedService(sp => sp.GetRequiredService<MetricsCollectorService>());
 
 // CORS for Vue dev server
 builder.Services.AddCors(options =>
@@ -44,5 +50,6 @@ app.UseCors();
 // Endpoints
 app.MapChatEndpoints();
 app.MapAuditEndpoints();
+app.MapSystemMonitorEndpoints();
 
 app.Run();
